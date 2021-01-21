@@ -1,21 +1,21 @@
 import React from 'react';
 import { FaBars } from 'react-icons/fa'
 import { Nav, 
-    NavbarContainer, 
+    NavBarContainer, 
     NavLogo, 
     MobileIcon, 
     NavMenu, 
     NavItem, 
     NavLinks,
     NavBtn,
-    NavBtnLink } from './NavbarElements';
+    NavBtnLink } from './NavBarElements';
 
 
-const Navbar = () => {
+const NavBar = () => {
     return (
         <>
             <Nav>
-                <NavbarContainer>
+                <NavBarContainer>
                 <NavLogo Link to='/'>
                     <h1>🌱MintBank</h1>
                 </NavLogo>
@@ -36,13 +36,14 @@ const Navbar = () => {
                         <NavLinks to="signup">Sign Up</NavLinks>
                     </NavItem>
                 </NavMenu>
+                
                 <NavBtn>
                     <NavBtnLink to="/signin">Sign In</NavBtnLink>
                 </NavBtn>
-                </NavbarContainer>
+                </NavBarContainer>
             </Nav>
         </>
     )
 };
 
-export default Navbar;
+export default NavBar;
