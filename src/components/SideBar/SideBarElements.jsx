@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { FaTimes } from 'react-icons/fa';
 import { Link as LinkScroll} from 'react-scroll';
 import { Link as LinkRouter} from 'react-router-dom';
+import { FaTimes } from 'react-icons/fa';
 
 export const SideBarContainer = styled.aside`
     position: fixed;
@@ -14,10 +14,11 @@ export const SideBarContainer = styled.aside`
     top: 0;
     left: 0;
     transition: 0.3s ease-in-out;
-    /* Ternary Operator who decides if the NavBar is opened (100%) or closed (0%) */
-    opacity: ${({ isOpen }) => isOpen ? '100%' : '0'};
-    /* Ternary Operator who decides if the Burger inside NavBar is opened (0%) or closed (100%) */
-    top: ${({ isOpen }) => isOpen ? '0' : '100%'};
+/* Ternary Operator who decides if the NavBar is opened (100%) or closed (0%) */
+   opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
+/* Ternary Operator who decides if the Burger inside NavBar is opened (0%) or closed (100%) */
+   top: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
+   /* top: 0; */
 `;
 
 export const Icon = styled.div`

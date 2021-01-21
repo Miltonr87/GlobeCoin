@@ -11,7 +11,7 @@ import { Nav,
     NavBtnLink } from './NavBarElements';
 
 
-const NavBar = () => {
+const NavBar = ({ toggle }) => {
     return (
         <>
             <Nav>
@@ -19,7 +19,7 @@ const NavBar = () => {
                 <NavLogo Link to='/'>
                     <h1>🌱MintBank</h1>
                 </NavLogo>
-                <MobileIcon>
+                <MobileIcon onClick={toggle}>
                     <FaBars />
                 </MobileIcon>
                 <NavMenu>
