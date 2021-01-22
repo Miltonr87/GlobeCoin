@@ -24,8 +24,8 @@ const HeroSection = () => {
                 <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
             </HeroBg>
             <HeroContent>
-                <HeroH1>Money doesn't grow on a tree</HeroH1>
-                <HeroP>Open your account and start taking care of your real money.</HeroP>
+                <HeroH1>Reinventing global access to cryptocurrencies</HeroH1>
+                <HeroP>Open your account and start taking care of your money when travelling around the world.</HeroP>
                 <HeroBtnWrapper>
                     <Button to="/signup" onMouseEnter={onHover} onMouseLeave={onHover}>
                     Get Started! {hover ? <ArrowForward /> : <ArrowRight />}

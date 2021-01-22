@@ -17,7 +17,7 @@ const NavBar = ({ toggle }) => {
             <Nav>
                 <NavBarContainer>
                 <NavLogo Link to='/'>
-                    <h1>🌱MintBank</h1>
+                    <h1>GlobeCoin</h1>
                 </NavLogo>
                 <MobileIcon onClick={toggle}>
                     <FaBars />
