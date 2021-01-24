@@ -14,14 +14,14 @@ import { Nav,
 
 
 const NavBar = ({ toggle }) => {
-    const toogleHome = () => {
+    const toggleHome = () => {
         scroll.scrollToTop();
     }
     return (
         <>
             <Nav>
                 <NavBarContainer>
-                <NavLogo to='/' onClick={toogleHome}>
+                <NavLogo to='/' onClick={toggleHome}>
                     <h1>GlobeCoin</h1>
                 </NavLogo>
                 <MobileIcon onClick={toggle}>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button } from '../Buttons/ButtonElement';
+/*import { ReactComponent as Img } from '../../assets/images/svg-1.svg';*/
 import {
     InfoContainer,
     InfoWrapper,
@@ -34,7 +35,7 @@ const DataSection = ({
                 <InfoRow imgStart={imgStart}>
                     <Column1>
                         <TextWrapper>
-                            <TopLine>{topLine}</TopLine>
+                            <TopLine src={img}>{topLine}</TopLine>
                             <Header lightText={lightText}> {headLine} </Header>
                             <SubTitle darkText={darkText}>{description}</SubTitle>
                             <BtnWrap>
