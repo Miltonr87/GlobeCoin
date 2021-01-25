@@ -44,7 +44,7 @@ export const TestimonialsSection = styled.section`
 `;
 
 export const TestimonialsContent = styled.div`
-    margin: 50px;
+    margin: 30px;
     border-radius: 10px 10px 10px 10px;
     width: 30%;
     height: 100%;
@@ -69,6 +69,7 @@ export const TestimonialsP = styled.p`
     /*line-height: 24px;*/
     color: #010606;
     text-align: justify;
+    padding: 5px;
 `;
 
 export const TestimonialsAuthor = styled.div`

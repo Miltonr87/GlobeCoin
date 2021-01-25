@@ -8,8 +8,8 @@ import { HeroContainer,
     HeroH1,
     HeroP,
     HeroBtnWrapper,
-    ArrowForward,
-    ArrowRight } from './HeroElements';
+    ChatSquareDots,
+    ChatSquare } from './HeroElements';
 
 const HeroSection = () => {
     const [hover, setHover] = useState(false);
@@ -27,8 +27,8 @@ const HeroSection = () => {
                 <HeroH1>Reinventing global access to cryptocurrencies</HeroH1>
                 <HeroP>Open your account and start taking care of your money when travelling around the world.</HeroP>
                 <HeroBtnWrapper>
-                    <Button to="/signup" onMouseEnter={onHover} onMouseLeave={onHover}>
-                    Get Started! {hover ? <ArrowForward /> : <ArrowRight />}
+                    <Button to="/chatroom" onMouseEnter={onHover} onMouseLeave={onHover}>
+                    Online Chat {hover ? <ChatSquareDots /> : <ChatSquare />}
                     </Button>
                 </HeroBtnWrapper>
             </HeroContent>    

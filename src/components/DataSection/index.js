@@ -39,7 +39,7 @@ const DataSection = ({
                             <Header lightText={lightText}> {headLine} </Header>
                             <SubTitle darkText={darkText}>{description}</SubTitle>
                             <BtnWrap>
-                                <Button to="home"
+                                <Button
                                 smooth={true}
                                 duration={500}
                                 spy={true}
