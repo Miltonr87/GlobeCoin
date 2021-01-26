@@ -7,6 +7,7 @@ import { dataInfo, dataInfo2, dataInfo3 } from '../components/DataSection/Data';
 import TestimonialsSection from '../components/Testimonials';
 import Services from '../components/Services';
 import Footer from '../components/Footer';
+import CoinConverter from '../components/CoinConverter';
 
 const Home = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,7 @@ const Home = () => {
         <Services />
         <DataSection {...dataInfo3}/>
         <TestimonialsSection />
+        <CoinConverter />
         <Footer />
         </>
     )

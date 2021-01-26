@@ -13,7 +13,7 @@ const Testimonials = () => {
         <>
             <TestimonialsContainer id="clients">
                 <TestimonialsInner>
-                    <TestimonialsInnerH2>What people say about us!</TestimonialsInnerH2>
+                    <TestimonialsInnerH2>What people say about us</TestimonialsInnerH2>
                     <TestimonialsInnerP>In arcu accumsan arcu adipiscing accumsan orci ac. Felis id enim aliquet. Accumsan ac integer lobortis
                 commodo ornare aliquet accumsan erat tempus amet porttitor.</TestimonialsInnerP>
                 </TestimonialsInner>

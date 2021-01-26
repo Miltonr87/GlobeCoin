@@ -30,6 +30,7 @@ export const TestimonialsInnerP = styled.p`
     margin-right: auto;
     font-size: 18px;
     text-align: justify;
+    line-height: 24px;
 `;
 
 export const TestimonialsSection = styled.section`

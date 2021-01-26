@@ -1,8 +1,12 @@
 /* Special styles for React Simple Chatbot */
 
+.elorQq {
+    z-index: 0 !important;
+}
+
 .rsc {
-    padding: 15px;
-    border-radius: 10px 10px 10px 10px;
+    padding: 15px !important;
+    border-radius: 10px 10px 10px 10px !important;
 }
 
 .fnYTcU {
