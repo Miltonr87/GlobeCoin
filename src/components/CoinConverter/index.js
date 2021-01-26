@@ -1,5 +1,6 @@
 import React from 'react';
 import './CoinConverterElements.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Jumbotron, Button, Form, Col, Spinner } from 'react-bootstrap';
 import { Score } from './CoinConverterElements';
 
