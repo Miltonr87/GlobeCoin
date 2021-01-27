@@ -52,7 +52,7 @@ export const MobileIcon = styled.div`
     @media screen and (max-width: 768px) {
         display: block;
         position: absolute;
-        top: 0;
+        bottom: 50px;
         right: 0;
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
@@ -120,7 +120,7 @@ export const NavBtnLink = styled(LinkRouter)`
 
     &:hover {
         transition: all 0.2s ease-in-out;
-        background: #504f60;
+        background: #3b88c3;
         color: #fff;
         outline: none;
         text-decoration: none;

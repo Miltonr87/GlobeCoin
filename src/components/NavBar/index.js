@@ -22,7 +22,7 @@ const NavBar = ({ toggle }) => {
             <Nav>
                 <NavBarContainer>
                 <NavLogo to='/' onClick={toggleHome}>
-                    <h1>GlobeCoin</h1>
+                    <h1>GL🌐BECOIN</h1>
                 </NavLogo>
                 <MobileIcon onClick={toggle}>
                     <FaBars />

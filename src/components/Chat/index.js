@@ -86,7 +86,7 @@ function Chat() {
         <ThemeProvider theme={theme} style={{ maxWidth: "300px" }}>
           <ChatBot
             headerTitle="GlobeCoin ChatRoom"
-            speechSynthesis={{ enable: true, lang: "en" }}
+            speechSynthesis={{ enable: false, lang: "en" }}
             steps={steps} /> 
         </ThemeProvider>
       </ChatContainer>

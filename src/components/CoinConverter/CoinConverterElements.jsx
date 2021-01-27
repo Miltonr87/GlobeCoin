@@ -7,7 +7,7 @@ import { Jumbotron,
     Col, 
     Spinner, 
     Alert,
-    Modal } from 'react-bootstrap';
+    Modal } from 'react-bootstrap';    
 
 export const Score = styled(FaAngleDoubleRight)`
     margin-left: 8px;
@@ -24,6 +24,7 @@ export const StyledForm = styled(Form)``;
 export const StyledCol = styled(Col)`
     padding-top: 5px;
     text-align: center;
+    
 `;
 export const StyledSpinner = styled(Spinner)``;
 export const StyledAlert = styled(Alert)`
@@ -34,6 +35,27 @@ export const StyledAlert = styled(Alert)`
 export const StyledModal = styled(Modal)``;
 export const StyledButton = styled(Button)`
     border-radius: 50px;
+    background: #F9B81F;
+    white-space: nowrap;
+    padding: ${ ({ big }) => (big ? '14px 48px' : '12px 30px') };
+    color: #010606;
+    font-size: ${ ({ fontBig }) => (fontBig ? '20px' : '16px') };
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in-out;
+    
+    &:hover {
+        transition: all 0.2s ease-in-out;
+        background: #3b88c3;
+        color: white;
+        outline: none;
+        text-decoration: none;
+    }
 `;
 
 

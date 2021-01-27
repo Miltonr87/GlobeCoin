@@ -55,7 +55,7 @@ export const SideBarLink = styled(LinkScroll)`
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    text-decoration: none;
+    text-decoration: none;s
     list-style: none;
     transition: 0.2s ease-in-out;
     text-decoration: none;
