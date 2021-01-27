@@ -38,6 +38,12 @@ export const NavLogo = styled(LinkRouter)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
+
+    &:hover {
+        color: #F9B81F;
+        outline: none;
+        text-decoration: none;
+    }
 `;
 
 export const MobileIcon = styled.div`
@@ -79,6 +85,12 @@ export const NavLinks = styled(LinkScroll)`
     height: 100%;
     cursor: pointer;
 
+    &:hover {
+        color: #F9B81F;
+        outline: none;
+        text-decoration: none;
+    }
+
     &.active {
         border-bottom: 3px solid #F9B81F;
     }
@@ -110,5 +122,7 @@ export const NavBtnLink = styled(LinkRouter)`
         transition: all 0.2s ease-in-out;
         background: #504f60;
         color: #fff;
+        outline: none;
+        text-decoration: none;
     }
 `;

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link as LinkRouter } from 'react-router-dom';
-import { Link as LinkScroll} from 'react-scroll';
+/*import { Link as LinkScroll} from 'react-scroll';*/
 
 export const Button = styled(LinkRouter)`
     border-radius: 50px;
@@ -11,6 +11,7 @@ export const Button = styled(LinkRouter)`
     font-size: ${ ({ fontBig }) => (fontBig ? '20px' : '16px') };
     text-decoration: none;
     border: none;
+    outline: none;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -21,6 +22,8 @@ export const Button = styled(LinkRouter)`
         transition: all 0.2s ease-in-out;
         background: #504f60;
         color: white;
+        outline: none;
+        text-decoration: none;
     }
 `; 
 
