@@ -25,6 +25,7 @@ export function CoinConverter() {
   const [validatedForm, setValidatedForm] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [resultConverter, setResultConverter] = useState("");
+  const [errorMsg, setErrorMsg] = useState(false);
 
   function handleValue(event) {
     setNewValue(event.target.value.replace(/\D/g, ""));
@@ -52,12 +53,22 @@ export function CoinConverter() {
     setValidatedForm(true);
     if (event.currentTarget.checkValidity() === true) {
       setShowSpinner(true);
-      axios.get(FIXER_URL).then((res) => {
-        const price = calculation(res.data);
-        setResultConverter(`${newValue} ${coinsFrom} = ${price} ${coinsFor}`);
-        setShowModal(true);
-        setShowSpinner(false);
-      });
+      axios
+        .get(FIXER_URL)
+        .then((res) => {
+          const price = calculation(res.data);
+          if (price) {
+            setResultConverter(
+              `${newValue}(${coinsFrom}) 💵 ${price}(${coinsFor})`
+            );
+            setShowModal(true);
+            setErrorMsg(false);
+            setShowSpinner(false);
+          } else {
+            showErrorMsg();
+          }
+        })
+        .catch((err) => showErrorMsg());
     }
   }
 
@@ -71,10 +82,14 @@ export function CoinConverter() {
     return price.toFixed(8); // I put 8 digits only for BitCoin calculations
   }
 
+  function showErrorMsg() {
+    setErrorMsg(true);
+    setShowSpinner(false);
+  }
+
   return (
     <CalculatorContainer id="calculator">
-      
-      <StyledAlert variant="danger" show={false} >
+      <StyledAlert variant="danger" show={errorMsg}>
         Conversion data error! Try again!
       </StyledAlert>
       <StyledJumbotron>
@@ -138,7 +153,7 @@ export function CoinConverter() {
           </StyledModal.Footer>
         </StyledModal>
       </StyledJumbotron>
-      </CalculatorContainer>
+    </CalculatorContainer>
   );
 }
 

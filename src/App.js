@@ -1,9 +1,9 @@
-import React from 'react';
-import { createGlobalStyle } from 'styled-components';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
-import Home from './pages';
-import SignIn from './pages/sigIn';
-import Chat from './components/Chat';
+import React from "react";
+import { createGlobalStyle } from "styled-components";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./pages";
+import SignIn from "./pages/sigIn";
+import Chat from "./components/Chat";
 /* import NavBar from './components/NavBar'; */
 
 const GlobalStyle = createGlobalStyle`
@@ -29,7 +29,7 @@ function App() {
         </Switch>
       </Router>
     </>
-  )
-};
+  );
+}
 
 export default App;
