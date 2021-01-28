@@ -9,16 +9,27 @@ import { Jumbotron,
     Alert,
     Modal } from 'react-bootstrap';    
 
+export const CalculatorContainer = styled.div`
+    background-color: #010606;
+`;
+
 export const Score = styled(FaAngleDoubleRight)`
     margin-left: 8px;
     font-size: 20px;
 `;
 
 export const StyledJumbotron = styled(Jumbotron)`
-    padding: 2rem 1rem;
-    margin-bottom: 2rem;
+    padding: 2rem;
+    margin-top: 0.2px;
+    margin-bottom: 0.2px;
+    margin-left: 10px;
+    margin-right: 10px;
     background-color: #e9ecef;
-    border-radius: .3rem;
+    border-radius: 1.3rem;
+
+    @media screen and (max-width: 480px) {
+        padding: 20px;
+    }
 `;
 export const StyledForm = styled(Form)``;
 export const StyledCol = styled(Col)`
@@ -31,6 +42,7 @@ export const StyledAlert = styled(Alert)`
     color: #721c24;
     background-color: #f8d7da;
     border-color: #f5c6cb;
+    margin-top: 20px;
 `;
 export const StyledModal = styled(Modal)``;
 export const StyledButton = styled(Button)`
@@ -44,9 +56,6 @@ export const StyledButton = styled(Button)`
     border: none;
     outline: none;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: all 0.2s ease-in-out;
     
     &:hover {

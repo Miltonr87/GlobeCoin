@@ -21,12 +21,12 @@ const Home = () => {
         <SideBar isOpen={isOpen} toggle={toggle} />
         <NavBar toggle={toggle} />
         <HeroSection />
+        <CoinConverter />
         <DataSection {...dataInfo}/>
         <DataSection {...dataInfo2}/>
         <Services />
         <DataSection {...dataInfo3}/>
         <TestimonialsSection />
-        <CoinConverter />
         <Footer />
         </>
     )

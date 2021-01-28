@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 /* React Scroll */
 import { animateScroll as scroll } from 'react-scroll';
@@ -10,13 +10,22 @@ import { Nav,
     NavItem, 
     NavLinks,
     NavBtn,
-    NavBtnLink } from './NavBarElements';
+    NavBtnLink,
+    ChatSquareDots,
+    ChatSquare } from './NavBarElements';
 
 
 const NavBar = ({ toggle }) => {
     const toggleHome = () => {
         scroll.scrollToTop();
     }
+
+    const [hover, setHover] = useState(false);
+
+    const onHover = () => {
+        setHover(hover ? false : true);
+    }
+
     return (
         <>
             <Nav>
@@ -46,7 +55,8 @@ const NavBar = ({ toggle }) => {
                 </NavMenu>
                 
                 <NavBtn>
-                    <NavBtnLink to="/signin">Sign In</NavBtnLink>
+                    <NavBtnLink to="/chatroom" onMouseEnter={onHover} onMouseLeave={onHover}>
+                    {hover ? <ChatSquareDots /> : <ChatSquare />} Chat </NavBtnLink>
                 </NavBtn>
                 </NavBarContainer>
             </Nav>

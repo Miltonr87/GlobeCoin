@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link as LinkRouter } from 'react-router-dom';
 import { Link as LinkScroll } from 'react-scroll';
+import { BsFillChatSquareFill, BsFillChatSquareDotsFill } from 'react-icons/bs';
 
 export const Nav = styled.nav`
     background: black;
@@ -11,7 +12,7 @@ export const Nav = styled.nav`
     font-size: 1rem;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 1000;
 
     @media screen and (max-width: 960px) {
         transition: 0.8s all ease;
@@ -43,6 +44,11 @@ export const NavLogo = styled(LinkRouter)`
         color: #F9B81F;
         outline: none;
         text-decoration: none;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin: 0px;
+        
     }
 `;
 
@@ -125,4 +131,14 @@ export const NavBtnLink = styled(LinkRouter)`
         outline: none;
         text-decoration: none;
     }
+`;
+
+export const ChatSquareDots = styled(BsFillChatSquareDotsFill)`
+    margin-left: 8px;
+    font-size: 20px;
+`;
+
+export const ChatSquare = styled(BsFillChatSquareFill)`
+    margin-left: 8px;
+    font-size: 20px;
 `;

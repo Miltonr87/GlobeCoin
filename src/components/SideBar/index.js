@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { SideBarContainer, 
     Icon, 
     CloseIcon,
@@ -6,9 +6,18 @@ import { SideBarContainer,
     SideBarMenu,
     SideBarLink,
     SideBtnWrap,
-    SideBarRouter } from './SideBarElements';
+    SideBarRouter,
+    ChatSquareDots,
+    ChatSquare  } from './SideBarElements';
 
 const SideBar = ({ isOpen, toggle }) => {  
+
+    const [hover, setHover] = useState(false);
+
+    const onHover = () => {
+        setHover(hover ? false : true);
+    }
+
     return (
         <SideBarContainer isOpen={isOpen} onClick={toggle}>
             <Icon onClick={toggle} >
@@ -23,7 +32,8 @@ const SideBar = ({ isOpen, toggle }) => {
                     <SideBarLink to="clients" onClick={toggle}> Clients </SideBarLink>
                 </SideBarMenu>
                 <SideBtnWrap>
-                    <SideBarRouter to='/signin'>Sign In</SideBarRouter>
+                    <SideBarRouter to='/chatroom' onMouseEnter={onHover} onMouseLeave={onHover}>
+                    {hover ? <ChatSquareDots /> : <ChatSquare />} Chat </SideBarRouter>
                 </SideBtnWrap>
             </SideBarWrapper>    
         </SideBarContainer>

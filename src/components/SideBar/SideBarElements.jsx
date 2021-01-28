@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import { Link as LinkScroll} from 'react-scroll';
 import { Link as LinkRouter} from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
+import { BsFillChatSquareFill, BsFillChatSquareDotsFill } from 'react-icons/bs';
 
 export const SideBarContainer = styled.aside`
     position: fixed;
-    z-index: 999;
+    z-index: 1001;
     width: 100%;
     height: 100%;
     background: #0d0d0d;
@@ -93,6 +94,15 @@ export const SideBarRouter = styled(LinkRouter)`
     }
 `;
 
+export const ChatSquareDots = styled(BsFillChatSquareDotsFill)`
+    margin-left: 8px;
+    font-size: 20px;
+`;
+
+export const ChatSquare = styled(BsFillChatSquareFill)`
+    margin-left: 8px;
+    font-size: 20px;
+`;
 
 
 

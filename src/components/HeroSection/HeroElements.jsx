@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { BsFillChatSquareFill, BsFillChatSquareDotsFill } from 'react-icons/bs';
+import { RiCurrencyLine, RiCurrencyFill } from 'react-icons/ri';
 
 
 export const HeroContainer = styled.div`
@@ -94,12 +94,12 @@ export const HeroBtnWrapper = styled.div`
     align-items: center;
 `;
 
-export const ChatSquareDots = styled(BsFillChatSquareDotsFill)`
+export const CurrencyWhite = styled(RiCurrencyLine)`
     margin-left: 8px;
     font-size: 20px;
 `;
 
-export const ChatSquare = styled(BsFillChatSquareFill)`
+export const CurrencyBlack = styled(RiCurrencyFill)`
     margin-left: 8px;
     font-size: 20px;
 `;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Video from '../../assets/video/mintbank.mp4';
+import Video from '../../assets/video/globecoin.mp4';
 import { Button } from '../Buttons/ButtonElement';
 import { HeroContainer, 
     HeroBg, 
@@ -8,8 +8,8 @@ import { HeroContainer,
     HeroH1,
     HeroP,
     HeroBtnWrapper,
-    ChatSquareDots,
-    ChatSquare } from './HeroElements';
+    CurrencyWhite,
+    CurrencyBlack } from './HeroElements';
 
 const HeroSection = () => {
     const [hover, setHover] = useState(false);
@@ -25,10 +25,15 @@ const HeroSection = () => {
             </HeroBg>
             <HeroContent>
                 <HeroH1>Reinventing global access to cryptocurrencies</HeroH1>
-                <HeroP>Open your account and start taking care of your money when travelling around the world.</HeroP>
+                <HeroP>Open your account and start taking care of your money. Search in real time for the best effective Bitcoin prices!</HeroP>
                 <HeroBtnWrapper>
-                    <Button to="/chatroom" onMouseEnter={onHover} onMouseLeave={onHover}>
-                    Online Chat {hover ? <ChatSquareDots /> : <ChatSquare />}
+                    <Button to="calculator"
+                    smooth={true} 
+                    duration={1900} 
+                    offset={-90}
+                     onMouseEnter={onHover} 
+                     onMouseLeave={onHover}>
+                    {hover ? <CurrencyWhite /> : <CurrencyBlack />} Calculator 
                     </Button>
                 </HeroBtnWrapper>
             </HeroContent>    

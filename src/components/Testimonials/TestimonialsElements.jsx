@@ -29,18 +29,21 @@ export const TestimonialsInnerP = styled.p`
     margin-left: auto;
     margin-right: auto;
     font-size: 18px;
-    text-align: justify;
     line-height: 24px;
 `;
 
 export const TestimonialsSection = styled.section`
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    
     
 
     @media screen and (max-width: 768px) {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        Width: 90%;
+        margin-left: 18px;
     }
 `;
 

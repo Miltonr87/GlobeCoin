@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./CoinConverterElements.css";
 import {
+  CalculatorContainer,
   Score,
   StyledJumbotron,
   StyledButton,
@@ -71,9 +72,9 @@ export function CoinConverter() {
   }
 
   return (
-    <>
-      <h1>Coin Converter</h1>
-      <StyledAlert variant="danger" show={false}>
+    <CalculatorContainer id="calculator">
+      
+      <StyledAlert variant="danger" show={false} >
         Conversion data error! Try again!
       </StyledAlert>
       <StyledJumbotron>
@@ -137,7 +138,7 @@ export function CoinConverter() {
           </StyledModal.Footer>
         </StyledModal>
       </StyledJumbotron>
-    </>
+      </CalculatorContainer>
   );
 }
 
