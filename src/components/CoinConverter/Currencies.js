@@ -26,7 +26,7 @@ const Currencies = () => {
 		{ "initials": "ZAR", "description": "Rand South Africa" }
 	];
     
-    // Compare strings to sort the array of coins //
+    /* Compare strings to sort the array of coins */
     function compare(coin1, coin2) {
         if (coin1.description < coin2.description) {
             return -1;
