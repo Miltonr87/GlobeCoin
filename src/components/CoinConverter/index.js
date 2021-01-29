@@ -15,9 +15,7 @@ import Currencies from "./Currencies";
 import axios from "axios";
 
 export function CoinConverter() {
-  const FIXER_URL =
-    "http://data.fixer.io/api/latest?access_key=69493af1c0b2f3dd840d8a42f3ce2e04"; // API Key
-
+ 
   const [newValue, setNewValue] = useState("1");
   const [coinsFrom, setCoinsFrom] = useState("USD");
   const [coinsFor, setCoinsFor] = useState("BTC");
@@ -53,14 +51,24 @@ export function CoinConverter() {
     setValidatedForm(true);
     if (event.currentTarget.checkValidity() === true) {
       setShowSpinner(true);
-      axios
-        .get(FIXER_URL)
-        .then((res) => {
+
+      const options = {
+        method: 'GET',
+        url: 'https://fixer-fixer-currency-v1.p.rapidapi.com/latest',
+        params: {base: 'USD', symbols: 'AUD,BRL,BTC, BTC, CAD, CHF, CNY, CZK, DKK, EUR, GBP, HKD, IDR, ILS, INR, JPY, KRW, MXN, NZD, SEK, USD, ZAR'},
+        headers: {
+          'x-rapidapi-key': '29f0d60460msh39b8cfc1c4e9c38p1944fejsn9cda426b0028',
+          'x-rapidapi-host': 'fixer-fixer-currency-v1.p.rapidapi.com'
+        }
+      };
+
+      axios.request(options).then((res) => {
           const price = calculation(res.data);
           if (price) {
             setResultConverter(
               `${newValue}(${coinsFrom}) 💵 ${price}(${coinsFor})`
             );
+            
             setShowModal(true);
             setErrorMsg(false);
             setShowSpinner(false);
