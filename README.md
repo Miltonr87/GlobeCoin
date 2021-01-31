@@ -8,7 +8,7 @@
 
 ### About
 
-Made with **React** as SPA and inspired by features from financial investment companies like [XP Investimentos](ttps://www.xpi.com.br/) and [Biscoint](https://biscoint.io/buy/btc/brl?amount=1000&isQuote=true) . The project uses **Compound Components** as a pattern in the layout composition. Together with them, the Web App consumes monetary data provided by the **Fixer API** with **Axios** and converts the currencies to Bitcoin or to another currency chosen by the user. To build it I used the most modern tool in React documentation called **Hooks API** and the whole project was written using the technique of **Styled Components** for CSS, in addition to covering a **ChatBot** library in real time configured to interact with the user. 
+Made with **React** as SPA and inspired by features from financial investment companies like [XP Investimentos](ttps://www.xpi.com.br/) and [Biscoint](https://biscoint.io/buy/btc/brl?amount=1000&isQuote=true) . The project uses **Compound Components** as a pattern in the layout composition. Together with them, the Web App consumes monetary data provided by the **[Fixer API](https://fixer.io)** with **Axios** and converts the currencies to Bitcoin or to another currency chosen by the user. To build it I used the most modern tool in React documentation called **Hooks API** and the whole project was written using the technique of **Styled Components** for CSS, in addition to covering a **ChatBot** library in real time configured to interact with the user. 
 
 ### Getting Started
 
@@ -20,7 +20,7 @@ Made with **React** as SPA and inspired by features from financial investment co
 As you see, **GlobeCoin** runs on [Node.js](https://nodejs.org/), so before you can continue, please ensure that you have it installed with NPM or Yarn. Once you have Node installed, you will need the React (17.01) library. So, to start the project in your machine, open your terminal inside the GlobeCoin folder and type "NPM Install" or "Yarn Install".
 
 ### Additional packages
-- [Axios](https://github.com/axios/axios)
+- [Axios](https://github.com/axios/axios) (To capture the Fixer API information)
 - [Styled Components](https://github.com/styled-components/styled-components) (Used to simplify the use of classes in CSS)
 - [React Router](https://reactrouter.com/) (React Component Pattern)
 - [React Scroll](https://www.npmjs.com/package/react-scroll) (Element scroll effect after a click)
