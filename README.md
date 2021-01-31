@@ -8,7 +8,7 @@
 
 ### About
 
-Made with **React** as SPA and inspired by features from financial investment companies like [Biscoint](https://biscoint.io/buy/btc/brl?amount=1000&isQuote=true) . The project uses **Compound Components** as a pattern in the layout composition. Together with them, the Web App consumes monetary data provided by the **[Fixer API](https://fixer.io)** with **Axios** and converts the currencies to Bitcoin or to another currency chosen by the user. To build it I used the most modern tool in React documentation called **Hooks API** and the whole project was written using the technique of **Styled Components** for CSS, in addition to covering a **ChatBot** library in real time configured to interact with the user. 
+Made with **React** as SPA and inspired by features from financial investment companies like [Biscoint](https://biscoint.io/buy/btc/brl?amount=1000&isQuote=true) . The project uses **Compound Components** pattern. The Web App consumes monetary data provided by the **[Fixer API](https://fixer.io)** with **Axios** and converts the currencies to Bitcoin or to another currency chosen by the user. To build it I used the most modern tool in React documentation called **Hooks API** and the whole project was written using the technique of **Styled Components** for CSS, in addition to covering a **ChatBot** library in real time configured to interact with the user. 
 
 ### Getting Started
 
