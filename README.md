@@ -8,7 +8,7 @@
 
 ### About
 
-Made with **React** as SPA and inspired by features from financial investment companies like [Biscoint](https://biscoint.io/buy/btc/brl?amount=1000&isQuote=true) . The project uses **Compound Components** pattern. The Web App consumes monetary data provided by the **[Fixer API](https://fixer.io)** with **Axios** and converts the currencies to Bitcoin or to another currency chosen by the user. To build it I used the most modern tool in React documentation called **Hooks API** and the whole project was written using the technique of **Styled Components** for CSS, in addition to covering a **ChatBot** library in real time configured to interact with the user. 
+Made with **React** as SPA and inspired by features from financial investment companies like [Biscoint](https://biscoint.io/buy/btc/brl?amount=1000&isQuote=true) . The project uses **Compound Components** pattern. The Web App consumes monetary data provided by **[Fixer API](https://fixer.io)** with **Axios** and converts the currencies to Bitcoin or any other currency chosen by he user. To build it I used the most modern tool in React documentation called **Hooks API** and the whole project was written using the technique of **Styled Components** for CSS. In addition, a **ChatBot** has been programmed in real time to interact with user who may have questions about the company.
 
 ### Getting Started
 
@@ -21,9 +21,9 @@ As you see, **GlobeCoin** runs on [Node.js](https://nodejs.org/), so before you 
 
 ### Additional packages
 - [Axios](https://github.com/axios/axios) (To capture the Fixer API information)
-- [Styled Components](https://github.com/styled-components/styled-components) (Used to simplify the use of classes in CSS)
+- [Styled Components](https://github.com/styled-components/styled-components) (Used to simplify CSS)
 - [React Router](https://reactrouter.com/) (React Component Pattern)
-- [React Scroll](https://www.npmjs.com/package/react-scroll) (Element scroll effect after a click)
+- [React Scroll](https://www.npmjs.com/package/react-scroll) (Scroll effects after menu click)
 - [React Icons](http://react-icons.github.io/react-icons/) (Icons for buttons)
 - [Bootstrap React](https://react-bootstrap.github.io/) (To create modern jumbotron effects)
 - [React Simple ChatBot](https://openbase.com/js/react-simple-chatbot) (To create a customer service area)
