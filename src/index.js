@@ -2,8 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import firebase from 'firebase';
+import { Provider } from 'react-redux';
+import store from './store';
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyBi2MQkJG8Vtd2XAV4nqVbsGDP9x746v-8",
   authDomain: "globe-coin.firebaseapp.com",
@@ -16,10 +17,13 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+window.store = store;
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store} >
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
   document.getElementById("root")
 );

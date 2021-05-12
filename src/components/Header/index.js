@@ -9,7 +9,7 @@ const Header = (props) => {
           <div className="logo">GL🌐BECOIN</div>
             <ul className="leftMenu">
               <li><NavLink to={'/login'}>Login</NavLink></li>
-              <li><NavLink to={'/signup'}>Sign up</NavLink></li>
+              <li><NavLink to={'/register'}>Register</NavLink></li>
             </ul>
         </div>
           <div style={{margin: '20px 0', color: '#fff', fontWeight: 'bold'}}>Hi Milton</div>

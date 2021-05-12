@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Layout from '../../../components/Layout';
-import Card from '../../../components/Layout/UI/Card';
+import Card from '../../../components/Authentication/Card';
 import './style.css';
 
 const RegisterPage = () => {
@@ -14,38 +14,38 @@ const RegisterPage = () => {
             <div className="registerContainer">
                 <Card>
                     <form>
-                        <h3> Sign Up</h3>
+                        <h3> Register </h3>
 
                         <input 
                             name="firstName"
                             type="text" 
                             value={firstName} 
                             onChange={(e) => setFirstName(e.target.value)} 
-                            placeHolder="First Name" />
+                            placeholder="First Name" />
 
                         <input 
                             name="lastName"
                             type="text" 
                             value={lastName} 
                             onChange={(e) => setLastName(e.target.value)} 
-                            placeHolder="Last Name" />    
+                            placeholder="Last Name" />    
 
                         <input 
                             name="email"
                             type="text" 
                             value={email} 
                             onChange={(e) => setEmail(e.target.value)} 
-                            placeHolder="email" />
+                            placeholder="email" />
 
                         <input 
                             name="password"
                             type="password" 
                             value={password} 
                             onChange={(e) => setPassword(e.target.value)} 
-                            placeHolder="password" />    
+                            placeholder="password" />    
 
                         <div>
-                            <button> Sign Up </button>
+                            <button> Register </button>
                         </div>    
                     </form>
                 </Card>
