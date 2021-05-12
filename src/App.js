@@ -1,33 +1,40 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./pages";
-import SignIn from "./pages/sigIn";
-import Chat from "./components/Chat";
-/* import NavBar from './components/NavBar'; */
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import GlobeCoin from "./pages";
+import HomePage from "./pages/authuser/HomePage";
+import LoginPage from "./pages/authuser/LoginPage";
+import RegisterPage from "./pages/authuser/RegisterPage";
 
 const GlobalStyle = createGlobalStyle`
-
   * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: ubuntu;
-}
+  }
 
+  ul li {
+  list-style: none;
+  }
+
+  a {
+  text-decoration: none;
+  }
 `;
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Router>
+      <BrowserRouter>
         <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/signin" component={SignIn} />
-          <Route path="/chatroom" component={Chat} />
+          <Route path="/" component={GlobeCoin} exact />
+          <Route path="/home" component={HomePage} />
+          <Route path="/login" component={LoginPage} />
+          <Route path="/register" component={RegisterPage} />
         </Switch>
-      </Router>
+      </BrowserRouter>
     </>
   );
 }
