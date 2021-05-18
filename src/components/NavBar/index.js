@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
-/* React Scroll */
 import { animateScroll as scroll } from "react-scroll";
 import {
   Nav,
@@ -12,8 +11,8 @@ import {
   NavLinks,
   NavBtn,
   NavBtnLink,
-  ChatSquareDots,
-  ChatSquare,
+  LoginWhite,
+  LoginBlack
 } from "./NavBarElements";
 
 const NavBar = ({ toggle }) => {
@@ -97,11 +96,11 @@ const NavBar = ({ toggle }) => {
 
           <NavBtn>
             <NavBtnLink
-              to="/chatroom"
+              to="/login"
               onMouseEnter={onHover}
               onMouseLeave={onHover}
             >
-              {hover ? <ChatSquareDots /> : <ChatSquare />} Chat{" "}
+              {hover ? <LoginWhite /> : <LoginBlack />} Login {" "}
             </NavBtnLink>
           </NavBtn>
         </NavBarContainer>

@@ -1,5 +1,6 @@
-/* eslint-disable import/no-anonymous-default-export */
+import { combineReducers } from 'redux';
+import { userReducer } from './userReducer';
 
-export default () => {
-    return {user: 'Milton Rodrigues' }
-};
+export const rootReducer = combineReducers({
+    user: userReducer,
+})

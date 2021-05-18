@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link as LinkRouter } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
-import { BsFillChatSquareFill, BsFillChatSquareDotsFill } from "react-icons/bs";
+import { RiLoginCircleFill, RiLoginCircleLine } from "react-icons/ri";
 
 export const Nav = styled.nav`
   background: black;
@@ -30,7 +30,6 @@ export const NavBarContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkRouter)`
-  color: #f9b81f;
   justify-self: flex-start;
   cursor: pointer;
   font-size: 1.5rem;
@@ -40,8 +39,11 @@ export const NavLogo = styled(LinkRouter)`
   font-weight: bold;
   text-decoration: none;
 
-  &:hover {
+  h1 {
     color: #f9b81f;
+  }
+
+  &:hover {
     outline: none;
     text-decoration: none;
   }
@@ -132,12 +134,12 @@ export const NavBtnLink = styled(LinkRouter)`
   }
 `;
 
-export const ChatSquareDots = styled(BsFillChatSquareDotsFill)`
+export const LoginWhite = styled(RiLoginCircleLine)`
   margin-left: 8px;
   font-size: 20px;
 `;
 
-export const ChatSquare = styled(BsFillChatSquareFill)`
+export const LoginBlack = styled(RiLoginCircleFill)`
   margin-left: 8px;
   font-size: 20px;
 `;
