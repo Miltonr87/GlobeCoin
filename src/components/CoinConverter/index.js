@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./CoinConverterElements.css";
 import {
   CalculatorContainer,
   Score,

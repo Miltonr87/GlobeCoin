@@ -17,7 +17,7 @@ const ClientSection = () => {
         <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
       </HeroBg>
       <HeroContent>
-        <HeroH1>Transactions</HeroH1>
+        <HeroH1>Calculator</HeroH1>
         <HeroBtnWrapper>
           <CoinConverter />
         </HeroBtnWrapper>

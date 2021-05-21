@@ -48,7 +48,7 @@ const Header = ({ toggle }) => {
       <Nav>
         <NavBarContainer>
           <NavLogo key="home" onClick={handleClick} selectedKeys={[current]}>
-          <Link to="/home"> <h1>GL🌐BECOIN</h1> </Link>
+          <Link to="/"> <h1>GL🌐BECOIN</h1> </Link>
           </NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />

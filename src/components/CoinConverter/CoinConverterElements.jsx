@@ -12,7 +12,10 @@ import {
 } from "react-bootstrap";
 
 export const CalculatorContainer = styled.div`
-  background-color: #010606;
+  background-color: none;
+  .hidden {
+    display: none;
+}
 `;
 
 export const Score = styled(FaAngleDoubleRight)`
