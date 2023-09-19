@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./CoinConverterElements.css";
 import {
   CalculatorContainer,
   Score,
@@ -9,24 +10,22 @@ import {
   StyledSpinner,
   StyledAlert,
   StyledModal,
-} from "./CoinConverterElements";
-import Currencies from "./Currencies";
-import axios from "axios";
+} from './CoinConverterElements';
+import Currencies from './Currencies';
+import axios from 'axios';
 
 export function CoinConverter() {
- 
-  const [newValue, setNewValue] = useState("1");
-  const [coinsFrom, setCoinsFrom] = useState("USD");
-  const [coinsFor, setCoinsFor] = useState("BTC");
+  const [newValue, setNewValue] = useState('1');
+  const [coinsFrom, setCoinsFrom] = useState('USD');
+  const [coinsFor, setCoinsFor] = useState('BRL');
   const [showSpinner, setShowSpinner] = useState(false);
   const [validatedForm, setValidatedForm] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [resultConverter, setResultConverter] = useState("");
+  const [resultConverter, setResultConverter] = useState('');
   const [errorMsg, setErrorMsg] = useState(false);
 
   function handleValue(event) {
-    setNewValue(event.target.value.replace(/\D/g, ""));
-    // Take all non-numbers types and replace with ''//
+    setNewValue(event.target.value.replace(/\D/g, ''));
   }
 
   function handleCoinsFrom(event) {
@@ -38,9 +37,9 @@ export function CoinConverter() {
   }
 
   function handleCloseModal(event) {
-    setNewValue("1");
-    setCoinsFrom("USD");
-    setCoinsFor("BTC");
+    setNewValue('1');
+    setCoinsFrom('USD');
+    setCoinsFor('BRL');
     setValidatedForm(false);
     setShowModal(false);
   }
@@ -54,20 +53,24 @@ export function CoinConverter() {
       const options = {
         method: 'GET',
         url: 'https://fixer-fixer-currency-v1.p.rapidapi.com/latest',
-        params: {base: 'USD', symbols: 'AUD,BRL,BTC, BTC, CAD, CHF, CNY, CZK, DKK, EUR, GBP, HKD, IDR, ILS, INR, JPY, KRW, MXN, NZD, SEK, USD, ZAR'},
+        params: {
+          base: 'USD',
+          symbols:
+            'AUD, BRL, BTC, CAD, CHF, CNY, CZK, DKK, EUR, GBP, HKD, IDR, ILS, INR, JPY, KRW, MXN, NZD, SEK, USD, ZAR',
+        },
         headers: {
-          'x-rapidapi-key': '29f0d60460msh39b8cfc1c4e9c38p1944fejsn9cda426b0028',
-          'x-rapidapi-host': 'fixer-fixer-currency-v1.p.rapidapi.com'
-        }
+          'x-rapidapi-key':
+            '29f0d60460msh39b8cfc1c4e9c38p1944fejsn9cda426b0028',
+          'x-rapidapi-host': 'fixer-fixer-currency-v1.p.rapidapi.com',
+        },
       };
 
-      axios.request(options).then((res) => {
-          const price = calculation(res.data);
+      axios
+        .request(options)
+        .then((res) => {
+          const price = calculation(res.data, coinsFrom, coinsFor, newValue);
           if (price) {
-            setResultConverter(
-              `${newValue}(${coinsFrom}) 💵 ${price}(${coinsFor})`
-            );
-            
+            setResultConverter(`🪙 ${price}(${coinsFor})`);
             setShowModal(true);
             setErrorMsg(false);
             setShowSpinner(false);
@@ -79,14 +82,22 @@ export function CoinConverter() {
     }
   }
 
-  function calculation(data) {
+  function calculation(data, coinsFrom, coinsFor, newValue) {
     if (!data || data.success !== true) {
       return false;
     }
-    const priceCoinsFrom = data.rates[coinsFrom];
-    const priceCoinsFor = data.rates[coinsFor];
-    const price = (1 / priceCoinsFrom) * priceCoinsFor * newValue;
-    return price.toFixed(8); // I put 8 digits only for BitCoin calculations
+    const rates = data.rates;
+    const priceCoinsFrom = rates[coinsFrom];
+    const priceCoinsFor = rates[coinsFor];
+    let price;
+
+    if (coinsFor === 'BTC') {
+      price = (1 / priceCoinsFrom) * priceCoinsFor * newValue;
+      return price.toFixed(8);
+    } else {
+      price = (1 / priceCoinsFrom) * priceCoinsFor * newValue;
+      return price.toFixed(2);
+    }
   }
 
   function showErrorMsg() {
@@ -137,10 +148,10 @@ export function CoinConverter() {
 
             <StyledCol sm="2">
               <StyledButton variant="success" type="submit">
-                <span className={showSpinner ? null : "hidden"}>
+                <span className={showSpinner ? null : 'hidden'}>
                   <StyledSpinner animation="border" size="sm" />
                 </span>
-                <span className={showSpinner ? "hidden" : null}>Converter</span>
+                <span className={showSpinner ? 'hidden' : null}>Converter</span>
               </StyledButton>
             </StyledCol>
           </StyledForm.Row>

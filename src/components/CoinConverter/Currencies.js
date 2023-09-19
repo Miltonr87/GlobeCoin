@@ -1,32 +1,31 @@
-import React from "react";
+import React from 'react';
 
 const Currencies = () => {
   const Coins = [
     // Coins JSON list from: http://fixer.io //
-    { initials: "AUD", description: "🇦🇺 Dollar" },
-    { initials: "BRL", description: "🇧🇷 Real" },
-    { initials: "BTC", description: "₿ Bitcoin" },
-    { initials: "CAD", description: "🇨🇦 Dollar" },
-    { initials: "CHF", description: "🇨🇭 Franc" },
-    { initials: "CNY", description: "🇨🇳 Yuan" },
-    { initials: "CZK", description: "🇨🇿 Crown" },
-    { initials: "DKK", description: "🇩🇰 Crown" },
-    { initials: "EUR", description: "💶 Euro" },
-    { initials: "GBP", description: "🇬🇧 Pound" },
-    { initials: "HKD", description: "🇭🇰 Dollar" },
-    { initials: "IDR", description: "🇮🇩 Rupee" },
-    { initials: "ILS", description: "🇮🇱 New Shekel" },
-    { initials: "INR", description: "🇮🇳 Rupee" },
-    { initials: "JPY", description: "🇯🇵 Yen" },
-    { initials: "KRW", description: "🇰🇷 Won" },
-    { initials: "MXN", description: "🇲🇽 Peso" },
-    { initials: "NZD", description: "🇳🇿 Dollar" },
-    { initials: "SEK", description: "🇸🇪 Crown" },
-    { initials: "USD", description: "🇺🇸 Dollar" },
-    { initials: "ZAR", description: "🇿🇦 Rand" },
+    { initials: 'BRL', description: '🇧🇷 Brazil Real' },
+    { initials: 'BTC', description: '₿ Digital Bitcoin' },
+    { initials: 'AUD', description: '🇦🇺 Australlian Dollar' },
+    { initials: 'CAD', description: '🇨🇦 Canadian Dollar' },
+    { initials: 'CHF', description: '🇨🇭 Swiss Franc' },
+    { initials: 'CNY', description: '🇨🇳 Chinese Yuan' },
+    { initials: 'CZK', description: '🇨🇿 Czech Koruna' },
+    { initials: 'DKK', description: '🇩🇰 Denmark Crown' },
+    { initials: 'EUR', description: '💶 Euro' },
+    { initials: 'GBP', description: '🇬🇧 UK Pound' },
+    { initials: 'HKD', description: '🇭🇰 Hong Kong Dollar' },
+    { initials: 'IDR', description: '🇮🇩 Indonesian Rupee' },
+    { initials: 'ILS', description: '🇮🇱 Israel New Shekel' },
+    { initials: 'INR', description: '🇮🇳 Indian Rupee' },
+    { initials: 'JPY', description: '🇯🇵 Japan Yen' },
+    { initials: 'KRW', description: '🇰🇷 South Korean Won' },
+    { initials: 'MXN', description: '🇲🇽 Mexican Peso' },
+    { initials: 'NZD', description: '🇳🇿 New Zealand Dollar' },
+    { initials: 'SEK', description: '🇸🇪 Swedish Krona' },
+    { initials: 'USD', description: '🇺🇸 American Dollar' },
+    { initials: 'ZAR', description: '🇿🇦 South Africa Rand' },
   ];
 
-  /* Compare strings to sort the array of coins */
   function compare(coin1, coin2) {
     if (coin1.description < coin2.description) {
       return -1;
